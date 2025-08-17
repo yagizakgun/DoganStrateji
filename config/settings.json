@@ -1,0 +1,45 @@
+{
+    "api": {
+        "testnet": false
+    },
+    "paper_trading": {
+        "enabled": true,
+        "virtual_balance": 10000.0,
+        "commission_rate": 0.0004,
+        "slippage_bps": 2,
+        "fill_delay_ms": 50
+    },
+    "trading": {
+        "symbol": "BTCUSDT",
+        "timeframe": "15m",
+        "lookback_period": 20,
+        "risk_per_trade": 0.01,
+        "risk_reward_ratio": 1.5,
+        "max_positions": 1
+    },
+    "signals": {
+        "high_funding_threshold": 0.005,
+        "low_funding_threshold": -0.005,
+        "cvd_lookback": 10,
+        "confirmation_period": 3
+    },
+    "websocket": {
+        "reconnect_attempts": 5,
+        "reconnect_delay": 5
+    },
+    "logging": {
+        "level": "INFO",
+        "file": "trading_bot.log",
+        "max_file_size": 10485760,
+        "backup_count": 5,
+        "verbose_console": true,
+        "show_heartbeat": true,
+        "heartbeat_interval": 30,
+        "llm_logging": {
+            "enabled": true,
+            "file": "logs/llm_trading_bot.jsonl",
+            "max_file_size": 52428800,
+            "include_full_analysis": true
+        }
+    }
+}
